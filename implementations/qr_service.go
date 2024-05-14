@@ -2,7 +2,6 @@ package implementations
 
 import (
 	"bytes"
-	"fmt"
 
 	qrcode "github.com/skip2/go-qrcode"
 )
@@ -51,6 +50,5 @@ func (g *QRService) Get(data string) (string, error) {
 	g.bitmap = bitmap
 
 	res := g.toUpscaledString(true, 2)
-	fmt.Println(res)
 	return res, nil
 }
